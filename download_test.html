@@ -2,6 +2,7 @@
 <html lang="en">
 <body>
 <script>
+window.URL = window.URL || window.webkitURL || window.mozURL;
 downloadFileHelper("abc.txt", "aabbcc");
 function downloadFileHelper(fileName, content) {
 

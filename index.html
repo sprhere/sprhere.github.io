@@ -27,11 +27,11 @@
 <h1 style="text-align: center;">Life is strange - Before the storm <br> Selection Table</h1>
 <p>Disclaimer:<br>This page is used solely for customizing Chloe's journal replica.<br><a href="https://www.ebay.com/" target="_blank">Click here</a> to browse my commodity site for more details.</p>
 
-<form action="/action_page.php" target="_self" method="post" oninput="tranCode.value=transid.value, colCode.value=choice01.value+choice02.value+choice03.value+choice04.value+choice05.value+choice06.value+choice07.value+choice08.value+choice09.value+choice10.value+choice11.value+choice12.value+choice13.value+choice14.value+choice15.value+choice16.value+choice17.value+choice18.value+choice19.value+choice20.value+choice21.value+choice22.value+choice23.value+choice24.value+choice25.value+choice26.value+choice27.value+choice28.value+choice29.value+choice30.value+choice31.value+choice32.value+choice33.value+choice34.value+choice35.value+choice36.value+choice37.value+choice38.value+choice39.value+choice40.value+choice41.value+choice42.value+choice43.value+choice44.value+choice45.value
-">
+<form id="myform" action="http://192.168.1.8/index.php" target="_self" method="post" oninput="tranCode.value=transid.value, colCode.value=choice01.value+choice02.value+choice03.value+choice04.value+choice05.value+choice06.value+choice07.value+choice08.value+choice09.value+choice10.value+choice11.value+choice12.value+choice13.value+choice14.value+choice15.value+choice16.value+choice17.value+choice18.value+choice19.value+choice20.value+choice21.value+choice22.value+choice23.value+choice24.value+choice25.value+choice26.value+choice27.value+choice28.value+choice29.value+choice30.value+choice31.value+choice32.value+choice33.value+choice34.value+choice35.value+choice36.value+choice37.value+choice38.value+choice39.value+choice40.value+choice41.value+choice42.value+choice43.value+choice44.value+choice45.value
+, f_warning()">
   <div class="odd">
   Transaction ID:
-  <input type="text" name="transid" placeholder="Transaction ID from ebay" value="1111" required>
+  <input type="text" name="transid" placeholder="Transaction ID from ebay" value="0000000000000" pattern="\d{13}|\d{18}" required>
   </div>
 
   <div class="odd">
@@ -64,9 +64,9 @@
   <div class="odd">
     <fieldset>
       <legend>Choice 04 (episode one)</legend>
-      <img id="P04" src="pic/04A.jpg" Max width=70% alt="Error: Picture 04.jpg doesn't display."><br>
-      <input type="radio" name="choice04" value="A" onclick="document.getElementById('P04').src='pic/04A.jpg'" checked="checked"> (A) You purchased pot from Frank.<br>
-      <input type="radio" name="choice04" value="B" onclick="document.getElementById('P04').src='pic/04B.jpg'"> (B) You didn't purchase pot from Frank.<br>
+      <img id="P04" src="pic/04B.jpg" Max width=70% alt="Error: Picture 04.jpg doesn't display."><br>
+      <input type="radio" name="choice04" value="A" onclick="document.getElementById('P04').src='pic/04A.jpg'"> (A) You purchased pot from Frank.<br>
+      <input type="radio" name="choice04" value="B" onclick="document.getElementById('P04').src='pic/04B.jpg'" checked="checked"> (B) You didn't purchase pot from Frank.<br>
     </fieldset>
   </div> 
   
@@ -256,9 +256,11 @@
   <div class="odd">
     <fieldset>
       <legend>Choice 23 (episode two)</legend>
-      <img id="P23" src="pic/23A.jpg" Max width=70% alt="Error: Picture 23.jpg doesn't display."><br>
-      <input type="radio" name="choice23" value="A" onclick="document.getElementById('P23').src='pic/23A.jpg'" checked="checked"> (A) You pressed Frank for info and learned something about Sera.<br>
-      <input type="radio" name="choice23" value="B" onclick="document.getElementById('P23').src='pic/23B.jpg'"> (B) You pressed Frank for info but didn't get anywhere.<br>
+      <img id="P23" src="pic/23A.jpg" Max width=49% alt="Error: Picture 23.jpg doesn't display.">
+      <img id="P23_2" src="pic/23A2.jpg" Max width=49% alt="Error: Picture 26.jpg doesn't display."><br>
+      <input type="radio" name="choice23" value="A" onclick="document.getElementById('P23').src='pic/23A.jpg';document.getElementById('P23_2').style.display='';document.getElementById('P23_2').src='pic/23A2.jpg'" checked="checked"> (A) You pressed Frank for info and learned something about Sera.<br>
+      <input type="radio" name="choice23" value="B" onclick="document.getElementById('P23').src='pic/23B.jpg';document.getElementById('P23_2').style.display='';document.getElementById('P23_2').src='pic/23B2.jpg'"> (B) You pressed Frank for info but didn't get anywhere.<br>
+      <input type="radio" name="choice23" value="C" onclick="document.getElementById('P23').src='pic/23C.jpg';document.getElementById('P23_2').style.display='none'"><font color="#FF0000"> (C) You didn't pressed Frank for info.</font><br>
     </fieldset>
   </div> 
   
@@ -374,9 +376,9 @@
   <div class="odd">
     <fieldset>
       <legend>Choice 35 (episode three)</legend>
-      <img id="P35" src="pic/35A.jpg" Max width=70% alt="Error: Picture 35.jpg doesn't display."><br>
-      <input type="radio" name="choice35" value="A" onclick="document.getElementById('P35').src='pic/35A.jpg'" checked="checked"> (A) David searched your room.<br>
-      <input type="radio" name="choice35" value="B" onclick="document.getElementById('P35').src='pic/35B.jpg'"> (B) David didn't search your room.<br>
+      <img id="P35" src="pic/35B.jpg" Max width=70% alt="Error: Picture 35.jpg doesn't display."><br>
+      <input type="radio" name="choice35" value="A" onclick="document.getElementById('P35').src='pic/35A.jpg'"> (A) David searched your room.<br>
+      <input type="radio" name="choice35" value="B" onclick="document.getElementById('P35').src='pic/35B.jpg'" checked="checked"> (B) David didn't search your room.<br>
     </fieldset>
   </div> 
   
@@ -401,12 +403,12 @@
   <div class="odd">
     <fieldset>
       <legend>Choice 38 (episode three)</legend>
-      <img id="P38" src="pic/38A.jpg" Max width=49% alt="Error: Picture 38.jpg doesn't display.">
+      <img id="P38" src="pic/38D.jpg" Max width=49% alt="Error: Picture 38.jpg doesn't display.">
       <img id="P38_2" src="" Max width=49% style="display:none;" alt="Error: Picture 38.jpg doesn't display."><br>
-      <input type="radio" name="choice38" value="A" onclick="document.getElementById('P38').src='pic/38A.jpg';document.getElementById('P38_2').style.display='none'" checked="checked"> (A) You checked in on Drew and did nothing to cheer him up.<br>
+      <input type="radio" name="choice38" value="A" onclick="document.getElementById('P38').src='pic/38A.jpg';document.getElementById('P38_2').style.display='none'"> (A) You checked in on Drew and did nothing to cheer him up.<br>
       <input type="radio" name="choice38" value="B" onclick="document.getElementById('P38').src='pic/38B.jpg';document.getElementById('P38_2').style.display='';document.getElementById('P38_2').src='pic/38B2.jpg'"> (B) You checked in on Drew and Drew won the pudding.<br>
       <input type="radio" name="choice38" value="C" onclick="document.getElementById('P38').src='pic/38C.jpg';document.getElementById('P38_2').style.display='';document.getElementById('P38_2').src='pic/38C2.jpg'"> (C) You checked in on Drew and won the pudding.<br>
-      <input type="radio" name="choice38" value="D" onclick="document.getElementById('P38').src='pic/38D.jpg';document.getElementById('P38_2').style.display='none'"> (D) You checked in on Mikey and cheer Mikey up with tabletop gaming.<br>
+      <input type="radio" name="choice38" value="D" onclick="document.getElementById('P38').src='pic/38D.jpg';document.getElementById('P38_2').style.display='none'" checked="checked"> (D) You checked in on Mikey and cheer Mikey up with tabletop gaming.<br>
       <input type="radio" name="choice38" value="E" onclick="document.getElementById('P38').src='pic/38E.jpg';document.getElementById('P38_2').style.display='none'"> (E) You checked in on Mikey and did nothing to cheer him up.<br>
       <input type="radio" name="choice38" value="F" onclick="document.getElementById('P38').src='pic/38F.jpg';document.getElementById('P38_2').style.display='none'"> (F) You avoided Steph, Mikey, and Drew at the hospital.<br>
     </fieldset>
@@ -470,21 +472,21 @@
   <div class="odd">
     <fieldset>
       <legend>Choice 45 (episode three)</legend>
-      <img id="P45" src="pic/45A.jpg" Max width=70% alt="Error: Picture 45.jpg doesn't display."><br>
-      <input type="radio" name="choice45" value="A" onclick="document.getElementById('P45').src='pic/45A.jpg'" checked="checked"> (A) You gave the bracelet to sera.<br>
-      <input type="radio" name="choice45" value="B" onclick="document.getElementById('P45').src='pic/45B.jpg'"> (B) You didn't gave the bracelet to sera.<br>
+      <img id="P45" src="pic/45B.jpg" Max width=70% alt="Error: Picture 45.jpg doesn't display."><br>
+      <input type="radio" name="choice45" value="A" onclick="document.getElementById('P45').src='pic/45A.jpg'"> (A) You gave the bracelet to sera.<br>
+      <input type="radio" name="choice45" value="B" onclick="document.getElementById('P45').src='pic/45B.jpg'" checked="checked"> (B) You didn't gave the bracelet to sera.<br>
     </fieldset>
   </div> 
 
   <div class="odd">
     <p>Your transaction ID is:</p>
-    <output name="tranCode" for "transid">1111</output>
+    <output name="tranCode" for "transid">0000000000000</output>
     <p>Your choice code is:</p>
-    <output name="colCode" for "choice01 choice02 choice03 choice04 choice05 choice06 choice07 choice08 choice09 choice10 choice11 choice12 choice13 choice14 choice15 choice16 choice17 choice18 choice19 choice20 choice21 choice22 choice23 choice24 choice25 choice26 choice27 choice28 choice29 choice30 choice31 choice32 choice33 choice34 choice35 choice36 choice37 choice38 choice39 choice40 choice41 choice42 choice43 choice44 choice45
-">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</output><br><br>
+    <output name="colCode" for "choice01 choice02 choice03 choice04 choice05 choice06 choice07 choice08 choice09 choice10 choice11 choice12 choice13 choice14 choice15 choice16 choice17 choice18 choice19 choice20 choice21 choice22 choice23 choice24 choice25 choice26 choice27 choice28 choice29 choice30 choice31 choice32 choice33 choice34 choice35 choice36 choice37 choice38 choice39 choice40 choice41 choice42 choice43 choice44 choice45">AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAADAAAAAAB</output><br><br>
+    <font color="#FF0000"><p id="warn"></p></font>
     <input type="submit" value="confirm and submit">
     <input type="reset">
-    <p>Note: <br>1. <br>2. Some bugs may occur in some low verson browsers. If there's any discrepancy between 45 choices under each title and summary choice code here, the former ones rule.</p>
+    <p>Note: <br>1. Some bugs may occur in some low verson browsers. If there's any discrepancy between 45 choices under each title and summary choice code here, the former ones rule.</p>
   </div> 
 </form>
 
@@ -504,6 +506,7 @@
     <p id="test1">Note: start conversation and make choices by clicking on the buttons above.<br></p>
   </div> 
   
+<script src="scripts/action_rel.js"></script>
 <script src="scripts/audio_play.js"></script>
 
 </body>
